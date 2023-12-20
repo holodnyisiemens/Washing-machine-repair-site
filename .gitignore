@@ -1,2 +1,8 @@
 # env files
 .env
+
+# database files
+*.sqlite3
+
+# python files
+__pycache__
