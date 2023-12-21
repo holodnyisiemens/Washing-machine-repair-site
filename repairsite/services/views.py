@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Service
 
 menu = [
     {'url_title': 'Главная', 'url_name': 'home'},
@@ -21,8 +22,10 @@ def about(request):
     return render(request, 'services/about.html', context=data)
 
 def catalog(request):
+    services = Service.objects.all()
     data = {
         'title': 'Каталог услуг',
         'menu': menu,
+        'services': services,
     }
     return render(request, 'services/catalog.html', context=data)
