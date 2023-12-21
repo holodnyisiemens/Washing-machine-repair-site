@@ -6,3 +6,6 @@
 
 # python files
 __pycache__
+
+#vs stuff
+.vscode
